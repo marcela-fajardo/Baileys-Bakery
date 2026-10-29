@@ -428,28 +428,6 @@
     </a>
 
 </footer>
-    <script>
-    function manejarVideo() {
-        const video = document.getElementById('videoEntrevista');
-        const btnPlay = document.getElementById('btnPlay');
-        
-        if (video.paused) {
-            video.play();
-            video.controls = true; 
-            btnPlay.classList.add('oculto'); 
-        }
-    }
-
-    document.getElementById('videoEntrevista').addEventListener('pause', function() {
-        const btnPlay = document.getElementById('btnPlay');
-        btnPlay.classList.remove('oculto');
-    });
-
-    document.getElementById('videoEntrevista').addEventListener('play', function() {
-        const btnPlay = document.getElementById('btnPlay');
-        btnPlay.classList.add('oculto');
-    });
-    </script>
 </body>
 </html>
 
