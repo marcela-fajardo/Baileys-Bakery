@@ -840,6 +840,10 @@ footer p {
 }
 
 
+/* ==========================================
+   SECCIÓN PUBLICITARIA - BAILEY'S
+========================================== */
+
 #video-publicitario {
     background: var(--cream);
     padding: 80px 6%;
@@ -850,64 +854,66 @@ footer p {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
     align-items: center;
-    justify-content: center;
-    gap: clamp(35px, 6vw, 85px);
+    gap: clamp(35px, 5vw, 75px);
 }
 
-/* Marco rosado del video vertical */
+/* VIDEO VERTICAL CON MARCO ROSADO */
 #video-publicitario .advertising-video-frame {
     position: relative;
-    flex: 0 1 420px;
     width: 100%;
     max-width: 420px;
     aspect-ratio: 9 / 16;
+    justify-self: center;
     padding: 6px;
     background: var(--pink-light);
+    border: 1px solid var(--pink-light);
     border-radius: 24px;
     box-shadow: 0 12px 35px rgba(117, 76, 58, 0.10);
     box-sizing: border-box;
     overflow: hidden;
 }
 
-/* Reproductor de YouTube */
 #video-publicitario .advertising-video-frame iframe {
     position: absolute;
     inset: 6px;
     width: calc(100% - 12px);
     height: calc(100% - 12px);
-    display: block;
     border: none;
     border-radius: 17px;
 }
 
-/* Textos */
+/* CONTENIDO DE TEXTO */
 #video-publicitario .advertising-content {
-    flex: 1 1 500px;
-    min-width: 0;
+    width: 100%;
     max-width: 650px;
+    min-width: 0;
 }
 
+/* TEXTO SUPERIOR DORADO */
 #video-publicitario .advertising-eyebrow {
-    margin: 0 0 24px;
+    margin: 0 0 22px;
     color: var(--gold);
     font-family: "Comfortaa", cursive;
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 2.5px;
     line-height: 1.8;
 }
 
+/* TÍTULO PRINCIPAL */
 #video-publicitario .advertising-content h2 {
     margin: 0 0 22px;
     color: var(--pink-dark);
     font-family: "Lobster", cursive;
-    font-size: clamp(38px, 3.5vw, 55px);
+    font-size: clamp(40px, 3.5vw, 55px);
     font-weight: 400;
     line-height: 1.2;
 }
 
+/* LÍNEA DECORATIVA */
 #video-publicitario .advertising-divider {
     width: 75px;
     height: 3px;
@@ -916,15 +922,17 @@ footer p {
     border-radius: 3px;
 }
 
+/* SUBTÍTULO */
 #video-publicitario .advertising-subtitle {
     margin: 0 0 18px;
     color: var(--brown-dark);
     font-family: "Comfortaa", cursive;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
     line-height: 1.7;
 }
 
+/* DESCRIPCIÓN */
 #video-publicitario .advertising-description {
     margin: 0 0 18px;
     color: var(--text);
@@ -933,63 +941,55 @@ footer p {
     line-height: 1.9;
 }
 
+/* FIRMA DE LA MARCA */
 #video-publicitario .advertising-signature {
     margin: 25px 0 0;
     color: var(--pink-dark);
     font-family: "Lobster", cursive;
-    font-size: 23px;
+    font-size: 24px;
     line-height: 1.5;
 }
 
-/* TABLET */
+/* TABLETAS */
 @media (max-width: 900px) {
     #video-publicitario {
         padding: 60px 5%;
     }
 
     #video-publicitario .advertising-container {
-        gap: 35px;
-    }
-
-    #video-publicitario .advertising-video-frame {
-        flex-basis: 350px;
-        max-width: 350px;
+        grid-template-columns: minmax(240px, 350px) minmax(0, 1fr);
+        gap: 30px;
     }
 
     #video-publicitario .advertising-content h2 {
-        font-size: 40px;
+        font-size: 39px;
+    }
+
+    #video-publicitario .advertising-eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
     }
 }
 
 /* CELULARES */
 @media (max-width: 650px) {
     #video-publicitario {
-        padding: 45px 20px;
+        padding: 45px 22px;
     }
 
     #video-publicitario .advertising-container {
-        flex-direction: column;
-        gap: 35px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
     }
 
     #video-publicitario .advertising-video-frame {
-        flex: none;
         width: 100%;
         max-width: 360px;
-        margin: 0 auto;
     }
 
     #video-publicitario .advertising-content {
-        flex: none;
-        width: 100%;
         max-width: 520px;
         text-align: center;
-    }
-
-    #video-publicitario .advertising-eyebrow {
-        font-size: 10px;
-        letter-spacing: 2px;
-        margin-bottom: 18px;
     }
 
     #video-publicitario .advertising-content h2 {
@@ -997,23 +997,24 @@ footer p {
     }
 
     #video-publicitario .advertising-divider {
-        margin: 0 auto 22px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #video-publicitario .advertising-subtitle {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     #video-publicitario .advertising-description {
         font-size: 13px;
-        line-height: 1.85;
         text-align: left;
     }
 
     #video-publicitario .advertising-signature {
-        font-size: 21px;
+        font-size: 22px;
     }
 }
+
 
 
 
